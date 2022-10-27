@@ -113,6 +113,7 @@ if __name__ == '__main__':
     path = '/home/sergey/PycharmProjects/LTC_1_notebook/exel_data/Chapter_1_buildibgs.xlsx'
     # Экземпляр класса, который решает нашу первую задачу
     OSTC = OpenAndSearchTargetColumns(path=path)
-    print(f'Result of first step is: {OSTC}')
+    result = OSTC.make_result()
+    print(f'Result of first step is: {result}')
 
 
