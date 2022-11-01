@@ -17,7 +17,7 @@ class ListOfListsProducer:
     def __int__(self, path_to_file):
         """
 
-        :type path_to_file : string
+        type path_to_file : string
         :param path_to_file: string
         :return: none
         """
@@ -205,9 +205,10 @@ class ListOfListsProducer:
 
 
 # Путь до файла экселя
-path = '/home/sergey/PycharmProjects/LTC_1_notebook/exel_data/Chapter_1_buildibgs.xlsx'
+path_to_file = '/home/sergey/PycharmProjects/LTC_1_notebook/exel_data/Chapter_1_buildibgs.xlsx'
 # Экземпляр класса, который решает нашу первую задачу
-LOLP = ListOfListsProducer(path_to_file=path)
+LOLP = ListOfListsProducer()
+
 result = LOLP.work_with_lists()
 print(f'Result of first step is: {result}')
 
