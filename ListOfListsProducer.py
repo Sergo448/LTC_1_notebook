@@ -215,7 +215,9 @@ print(f'Result of first step is: {result}')
 """
                                     Почему-то ошибка
 Traceback (most recent call last):
-  File "/home/sergey/PycharmProjects/LTC_1_notebook/ListOfListsProducer.py", line 210, in <module>
-    LOLP = ListOfListsProducer(path_to_file=path)
-TypeError: ListOfListsProducer() takes no arguments
+  File "/home/sergey/PycharmProjects/LTC_1_notebook/ListOfListsProducer.py", line 212, in <module>
+    result = LOLP.work_with_lists(path_to_file)
+  File "/home/sergey/PycharmProjects/LTC_1_notebook/ListOfListsProducer.py", line 101, in work_with_lists
+    data_excel, ncols = self.OpenerCouneterRows()
+AttributeError: 'str' object has no attribute 'OpenerCouneterRows'
 """
