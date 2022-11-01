@@ -17,6 +17,7 @@ class ListOfListsProducer:
     def __int__(self, path_to_file):
         """
 
+        :type path_to_file : string
         :param path_to_file: string
         :return: none
         """
@@ -92,11 +93,17 @@ class ListOfListsProducer:
 
     def work_with_lists(self):
 
+        """
+
+        Получаем все необходимые данные и используем функции созданные ранее
+        return: result (list of lists)
+        """
         data_excel, ncols = self.OpenerCouneterRows()
 
-        row_razdel, start_row = self.searcher_row_razdel(data_excel)
+        row_razdel, start_row = self.searcher_row_razdel(data=data_excel)
 
         rows_ = self.make_rows(data=data_excel, start_row=start_row)
+
         # Создаем списки данных для будущего иерархического списка
         list_of_razdel_nn = []
         list_of_shifrs = []
@@ -203,3 +210,11 @@ path = '/home/sergey/PycharmProjects/LTC_1_notebook/exel_data/Chapter_1_buildibg
 LOLP = ListOfListsProducer(path_to_file=path)
 result = LOLP.work_with_lists()
 print(f'Result of first step is: {result}')
+
+"""
+                                    Почему-то ошибка
+Traceback (most recent call last):
+  File "/home/sergey/PycharmProjects/LTC_1_notebook/ListOfListsProducer.py", line 210, in <module>
+    LOLP = ListOfListsProducer(path_to_file=path)
+TypeError: ListOfListsProducer() takes no arguments
+"""
