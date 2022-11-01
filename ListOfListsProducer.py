@@ -207,9 +207,9 @@ class ListOfListsProducer:
 # Путь до файла экселя
 path_to_file = '/home/sergey/PycharmProjects/LTC_1_notebook/exel_data/Chapter_1_buildibgs.xlsx'
 # Экземпляр класса, который решает нашу первую задачу
-LOLP = ListOfListsProducer()
+LOLP = ListOfListsProducer
 
-result = LOLP.work_with_lists()
+result = LOLP.work_with_lists(path_to_file)
 print(f'Result of first step is: {result}')
 
 """
