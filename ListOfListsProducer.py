@@ -14,12 +14,10 @@ class ListOfListsProducer:
 
     """
 
-    def __int__(self, path_to_file):
+    def __init__(self, path_to_file):
         """
 
-        type path_to_file : string
-        :param path_to_file: string
-        :return: none
+        :param path_to_file:
         """
         self.path_to_file = path_to_file
 
@@ -207,17 +205,8 @@ class ListOfListsProducer:
 # Путь до файла экселя
 path_to_file = '/home/sergey/PycharmProjects/LTC_1_notebook/exel_data/Chapter_1_buildibgs.xlsx'
 # Экземпляр класса, который решает нашу первую задачу
-LOLP = ListOfListsProducer
+LOLP = ListOfListsProducer(path_to_file=path_to_file)
 
-result = LOLP.work_with_lists(path_to_file)
+result = LOLP.work_with_lists()
 print(f'Result of first step is: {result}')
 
-"""
-                                    Почему-то ошибка
-Traceback (most recent call last):
-  File "/home/sergey/PycharmProjects/LTC_1_notebook/ListOfListsProducer.py", line 212, in <module>
-    result = LOLP.work_with_lists(path_to_file)
-  File "/home/sergey/PycharmProjects/LTC_1_notebook/ListOfListsProducer.py", line 101, in work_with_lists
-    data_excel, ncols = self.OpenerCouneterRows()
-AttributeError: 'str' object has no attribute 'OpenerCouneterRows'
-"""
